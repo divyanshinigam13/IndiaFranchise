@@ -59,7 +59,7 @@ const firebaseConfig = {
           alert("Email already exist");
           return;
         } else {
-          var code = generateCode();
+          var code = generateCode(email);
           // Store the user details in the browser
           const obj = {
             name,
