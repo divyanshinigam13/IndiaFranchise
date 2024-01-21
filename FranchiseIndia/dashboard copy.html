@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merchandise Website</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fef0f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #merchandise-form {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        text-align: center;
+      }
+
+      label,
+      span {
+        margin: 10px 0px;
+        text-align: left;
+        color: #000000;
+        font-size: large;
+      }
+      label {
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- FIREBASE CDN -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+
+    <!-- CRYPTOJS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  </head>
+  <body>
+    <div id="merchandise-form">
+      <h2>Dashboard</h2>
+      <section id="user-details">
+        <div>
+          <label for="user-name">Name:</label>
+          <span id="user-name">John Doe</span>
+        </div>
+        <div>
+          <label for="user-email">Email:</label>
+          <span id="user-email">john.doe@example.com</span>
+        </div>
+        <div>
+          <label for="user-address">Address:</label>
+          <span id="user-address">123 Main St, Cityville</span>
+        </div>
+        <div>
+          <label for="user-mobile">Mobile Number:</label>
+          <span id="user-mobile">123-456-7890</span>
+        </div>
+      </section>
+    </div>
+
+    <script src="index.js"></script>
+
+    <!-- d41d8c -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetchLoggedInUserDetails();
+      });
+    </script>
+  </body>
+</html>
